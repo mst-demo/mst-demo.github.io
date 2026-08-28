@@ -54,6 +54,16 @@ window.I18N = {
     de: "App öffnen, Bandwidth sehen, entscheiden: pushen, halten oder erholen. Der Score ist auf deine eigene Baseline kalibriert, nicht auf einen Durchschnittsathleten."
   },
 
+  "hw.h2": { en: "The hardware", de: "Die Hardware" },
+  "hw.sub": {
+    en: "One band, no screen, five days of battery. Everything else lives in the app.",
+    de: "Ein Band, kein Display, fünf Tage Akku. Alles andere lebt in der App."
+  },
+  "hw.cap1": { en: "Screenless sensor band", de: "Sensorband ohne Display" },
+  "hw.app": { en: "The Bandwidth app", de: "Die Bandwidth-App" },
+  "hw.cap2": { en: "Included, no subscription", de: "Inklusive, kein Abo" },
+  "hw.free": { en: "Free", de: "Kostenlos" },
+
   "nl.h2": { en: "The Baseline. Our newsletter.", de: "The Baseline. Unser Newsletter." },
   "nl.p": {
     en: "Once a month: training science without the bro-science, product news and honest numbers.",

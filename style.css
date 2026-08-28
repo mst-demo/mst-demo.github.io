@@ -75,6 +75,18 @@ header{position:sticky;top:0;z-index:20;background:var(--canvas);border-bottom:1
 .tile-meta p{color:var(--mute)}
 @media(max-width:860px){.tile-grid{grid-template-columns:1fr}}
 
+/* Hardware-Streifen: Produktkarten nach Nike-PLP-Muster (Null-Radius, Visual auf Soft-Fläche) */
+.hw-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hw-card{display:block}
+.hw-visual{background:var(--cloud);aspect-ratio:5/4;display:grid;place-items:center;padding:32px}
+.hw-visual svg{width:min(280px,60%);height:auto}
+.hw-card:hover .hw-visual{background:#efefef}
+.hw-meta{padding:12px 2px 0;font-size:.95rem}
+.hw-meta b{font-weight:600}
+.hw-meta p{color:var(--mute)}
+.hw-price{display:block;margin-top:4px;font-weight:600}
+@media(max-width:860px){.hw-grid{grid-template-columns:1fr}}
+
 /* Score-Karte (App-Vorschau) auf Soft-Fläche */
 .score-strip{background:var(--cloud)}
 .score-strip .wrap{padding-top:48px;padding-bottom:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
