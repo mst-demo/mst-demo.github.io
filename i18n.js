@@ -59,7 +59,11 @@ window.I18N = {
     en: "One band, no screen, five days of battery. Everything else lives in the app.",
     de: "Ein Band, kein Display, fünf Tage Akku. Alles andere lebt in der App."
   },
+  "hw.p1": { en: "Band 2 Onyx", de: "Band 2 Onyx" },
+  "hw.p2": { en: "Band 2 Sand", de: "Band 2 Sand" },
+  "hw.p3": { en: "Charging Clip", de: "Charging Clip" },
   "hw.cap1": { en: "Screenless sensor band", de: "Sensorband ohne Display" },
+  "hw.cap3": { en: "Charges while you wear it", de: "Lädt beim Tragen" },
   "hw.app": { en: "The Bandwidth app", de: "Die Bandwidth-App" },
   "hw.cap2": { en: "Included, no subscription", de: "Inklusive, kein Abo" },
   "hw.free": { en: "Free", de: "Kostenlos" },
