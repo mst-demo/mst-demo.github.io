@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gratlinie - Ausrüstung für lange Wege</title>
+<meta name="description" content="Gratlinie ist ein fiktiver Demo-Onlineshop für Outdoor-Ausrüstung. Rucksäcke, Isolationsjacken und Trinkflaschen - gebaut für Grate, nicht für Trends.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Demo-Tracking: setzt bewusst nicht-essenzielle Cookies ohne Consent (Scan-Ziel) -->
+<script src="tracking.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">GRAT<span>LINIE</span></a>
+    <nav class="nav-links">
+      <a href="index.html#sortiment">Sortiment</a>
+      <a href="produkt.html">Kamm 32</a>
+      <a href="index.html#geschichte">Über uns</a>
+    </nav>
+    <a class="nav-cta" href="index.html#sortiment">Zum Sortiment</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Ausrüstung für lange Wege.</h1>
+      <p>Rucksäcke, Isolationsjacken und Trinkflaschen, entwickelt auf Alpenüberquerungen statt am Reißbrett. Reparierbar, langlebig, ehrlich bepreist.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="index.html#sortiment">Sortiment ansehen</a>
+        <a class="btn btn-ghost" href="produkt.html">Der Kamm 32</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://picsum.photos/seed/gratlinie-alpen-grat/980/760" alt="Bergrücken im Morgenlicht" width="980" height="760">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sortiment">
+  <div class="wrap">
+    <h2>Das Sortiment</h2>
+    <p class="sub">Drei Produktlinien, keine Saisonware. Jedes Teil bleibt Jahre im Programm und lässt sich reparieren statt ersetzen.</p>
+    <div class="products">
+      <a class="product" href="produkt.html">
+        <img src="https://picsum.photos/seed/gratlinie-rucksack-gruen/800/600" alt="Rucksack Kamm 32" width="800" height="600">
+        <div class="product-body">
+          <h3>Kamm 32</h3>
+          <p class="meta">Tourenrucksack, 32 Liter</p>
+          <p class="price">189 EUR</p>
+        </div>
+      </a>
+      <a class="product" href="produkt.html">
+        <img src="https://picsum.photos/seed/gratlinie-jacke-berg/800/600" alt="Isolationsjacke Firnwand" width="800" height="600">
+        <div class="product-body">
+          <h3>Firnwand</h3>
+          <p class="meta">Isolationsjacke, 340 g</p>
+          <p class="price">229 EUR</p>
+        </div>
+      </a>
+      <a class="product" href="produkt.html">
+        <img src="https://picsum.photos/seed/gratlinie-flasche-stahl/800/600" alt="Trinkflasche Quellgang" width="800" height="600">
+        <div class="product-body">
+          <h3>Quellgang</h3>
+          <p class="meta">Trinkflasche, Edelstahl, 0,75 l</p>
+          <p class="price">34 EUR</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="geschichte">
+  <div class="wrap">
+    <h2>Gegründet auf einem Grat zwischen Vent und Meran.</h2>
+    <p>Gratlinie entstand 2019, als zwei Bergführerinnen ihre geflickten Rucksäcke zum dritten Mal neu vernähten und beschlossen, es besser zu bauen. Heute fertigen wir in kleinen Serien in Südtirol und verkaufen direkt, ohne Zwischenhandel. Was kaputtgeht, reparieren wir - zehn Jahre lang, kostenlos.</p>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="wrap">
+    <div>
+      <h2>Tourenpost</h2>
+      <p>Einmal im Monat: neue Produkte, Reparatur-Tipps und eine Route, die sich lohnt.</p>
+    </div>
+    <form onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Demo-Shop: Anmeldung nur simuliert.');">
+      <label for="nl-email">E-Mail-Adresse</label>
+      <input id="nl-email" type="email" placeholder="E-Mail-Adresse" required>
+      <button class="btn" type="submit">Anmelden</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="demo-note">Gratlinie ist ein fiktiver Demo-Shop für Produktdemos rund um Cookie-Consent. Es gibt keine echten Produkte, Käufe oder Kundendaten.</p>
+    <p><a href="produkt.html">Kamm 32</a> · <a href="index.html#sortiment">Sortiment</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
