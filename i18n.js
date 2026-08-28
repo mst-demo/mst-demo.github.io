@@ -29,8 +29,8 @@ window.I18N = {
 
   "prod.h2": { en: "Bandwidth Band 2", de: "Bandwidth Band 2" },
   "prod.p": {
-    en: "No screen, no notifications. A sensor strap you forget you are wearing, and an app you actually want to open.",
-    de: "Kein Display, keine Benachrichtigungen. Ein Sensorband, das man vergisst, und eine App, die man gern öffnet."
+    en: "One number on an always-on display. No feeds, no notifications, just your bandwidth.",
+    de: "Eine Zahl auf dem Always-on-Display. Keine Feeds, keine Benachrichtigungen, nur deine Bandwidth."
   },
   "prod.vat": { en: "incl. VAT, ships to 38 countries", de: "inkl. MwSt., Versand in 38 Länder" },
   "prod.s1b": { en: "Battery", de: "Akku" },
@@ -56,13 +56,13 @@ window.I18N = {
 
   "hw.h2": { en: "The hardware", de: "Die Hardware" },
   "hw.sub": {
-    en: "One band, no screen, five days of battery. Everything else lives in the app.",
-    de: "Ein Band, kein Display, fünf Tage Akku. Alles andere lebt in der App."
+    en: "One band, one number, five days of battery. Everything else lives in the app.",
+    de: "Ein Band, eine Zahl, fünf Tage Akku. Alles andere lebt in der App."
   },
   "hw.p1": { en: "Band 2 Onyx", de: "Band 2 Onyx" },
   "hw.p2": { en: "Band 2 Sand", de: "Band 2 Sand" },
   "hw.p3": { en: "Charging Clip", de: "Charging Clip" },
-  "hw.cap1": { en: "Screenless sensor band", de: "Sensorband ohne Display" },
+  "hw.cap1": { en: "Sensor band, always-on score", de: "Sensorband mit Always-on-Score" },
   "hw.cap3": { en: "Charges while you wear it", de: "Lädt beim Tragen" },
   "hw.app": { en: "The Bandwidth app", de: "Die Bandwidth-App" },
   "hw.cap2": { en: "Included, no subscription", de: "Inklusive, kein Abo" },

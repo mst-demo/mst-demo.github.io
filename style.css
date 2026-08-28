@@ -47,7 +47,7 @@ header{position:sticky;top:0;z-index:20;background:var(--canvas);border-bottom:1
 .campaign{position:relative;overflow:hidden;background:var(--ink)}
 .campaign img{width:100%;height:min(78vh,720px);object-fit:cover}
 .campaign::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,.25) 38%,rgba(0,0,0,.08) 60%,transparent 100%)}
-.campaign-device{position:absolute;z-index:1;right:clamp(16px,7vw,140px);bottom:-72px;width:clamp(240px,26vw,400px);transform:rotate(-10deg);filter:drop-shadow(0 24px 40px rgba(0,0,0,.35))}
+.campaign-device{position:absolute;z-index:1;right:clamp(20px,9vw,180px);bottom:-34px;width:clamp(230px,21vw,330px);transform:rotate(-4deg);filter:drop-shadow(0 30px 50px rgba(0,0,0,.45))}
 .campaign-device svg{width:100%;height:auto}
 @media(max-width:860px){.campaign-device{display:none}}
 .campaign-copy{position:absolute;z-index:2;inset:auto 0 0 0;padding:0 clamp(24px,4vw,80px) clamp(32px,5vh,56px);max-width:1440px;margin:0 auto;color:var(--canvas)}
@@ -73,6 +73,8 @@ header{position:sticky;top:0;z-index:20;background:var(--canvas);border-bottom:1
 .tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .tile{position:relative;overflow:hidden;background:var(--cloud)}
 .tile img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.tile-metric{border:1px solid var(--hairline-soft)}
+.tile-metric svg{width:100%;height:auto;display:block}
 .tile .pill-label{position:absolute;left:16px;bottom:16px;background:var(--canvas);color:var(--ink);padding:.5rem 1.2rem;border-radius:var(--pill);font-weight:600;font-size:.95rem}
 .tile-meta{padding:10px 2px 0;font-size:.95rem}
 .tile-meta p{color:var(--mute)}
