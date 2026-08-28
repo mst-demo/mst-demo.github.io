@@ -48,6 +48,12 @@ window.I18N = {
   "globe.2": { en: "Warehouses in EU, UK and US", de: "Lager in EU, UK und US" },
   "globe.3": { en: "One app, 12 languages", de: "Eine App, 12 Sprachen" },
 
+  "score.h2": { en: "Your day, in one number", de: "Dein Tag, in einer Zahl" },
+  "score.p": {
+    en: "Open the app, see your bandwidth, decide: push, maintain or recover. The score is calibrated to your own baseline, not to an average athlete.",
+    de: "App öffnen, Bandwidth sehen, entscheiden: pushen, halten oder erholen. Der Score ist auf deine eigene Baseline kalibriert, nicht auf einen Durchschnittsathleten."
+  },
+
   "nl.h2": { en: "The Baseline. Our newsletter.", de: "The Baseline. Unser Newsletter." },
   "nl.p": {
     en: "Once a month: training science without the bro-science, product news and honest numbers.",

@@ -1,119 +1,131 @@
-/* BANDWIDTH - fiktive Wearable-Brand für Consent-Demos. Dark-Theme bewusst fest, Akzent Lime. */
+/* BANDWIDTH - fiktive Wearable-Brand für Consent-Demos.
+   Design-Sprache nach design/DESIGN.md (Nike-Analyse, getdesign.md):
+   Photography-first, Ink auf Canvas, eine Soft-Fläche, Pill-CTAs, Null-Radius-Karten,
+   keine Schatten, 8px-Grid, 48px-Sektionsrhythmus. Fonts: Jost (Futura-Erbe) + Archivo. */
 :root{
-  --bg:#0c0e0d;
-  --surface:#151817;
-  --surface-2:#1c201e;
-  --line:#2a2f2c;
-  --text:#eceeed;
-  --text-2:#a3aaa6;
-  --lime:#c9f24f;
-  --lime-deep:#a8d32e;
-  --radius:16px;
-  --display:"Space Grotesk","Manrope",system-ui,sans-serif;
-  --body:"Manrope",system-ui,-apple-system,sans-serif;
+  --ink:#111111;
+  --canvas:#ffffff;
+  --cloud:#f5f5f5;
+  --charcoal:#39393b;
+  --mute:#707072;
+  --stone:#9e9ea0;
+  --hairline:#cacacb;
+  --hairline-soft:#e5e5e5;
+  --success:#007d48;
+  --pill:9999px;
+  --display:"Jost","Archivo",system-ui,sans-serif;
+  --ui:"Archivo",system-ui,-apple-system,"Helvetica Neue",sans-serif;
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text-2);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:var(--canvas);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--display);color:var(--text);letter-spacing:-.01em}
-::selection{background:var(--lime);color:#111}
+h1,h2,h3{font-weight:500;letter-spacing:0}
+::selection{background:var(--ink);color:var(--canvas)}
 
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(24px,4vw,80px)}
 
-/* Navigation */
-header{position:sticky;top:0;z-index:20;background:rgba(12,14,13,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
-.brand{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.14em;color:var(--text)}
-.brand b{color:var(--lime);font-weight:700}
-.nav-links{display:flex;gap:26px;font-size:.95rem}
-.nav-links a:hover{color:var(--text)}
-.nav-right{display:flex;align-items:center;gap:14px}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:.78rem;font-weight:700}
-.lang button{font:inherit;border:none;background:transparent;color:var(--text-2);padding:.35rem .7rem;cursor:pointer}
-.lang button.on{background:var(--lime);color:#111}
-.nav-cta{background:var(--lime);color:#111;padding:.5rem 1.1rem;border-radius:999px;font-weight:800;font-size:.9rem;transition:transform .15s ease}
-.nav-cta:hover{background:var(--lime-deep)}
-.nav-cta:active{transform:scale(.97)}
+/* Navigation: weiß, Hairline, einzeilig */
+header{position:sticky;top:0;z-index:20;background:var(--canvas);border-bottom:1px solid var(--hairline-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-family:var(--display);font-weight:600;font-size:1.2rem;letter-spacing:.16em;color:var(--ink);text-transform:uppercase}
+.brand b{font-weight:600;color:var(--ink)}
+.nav-links{display:flex;gap:26px;font-size:1rem;font-weight:500}
+.nav-links a{padding:4px 0;border-bottom:2px solid transparent}
+.nav-links a:hover{border-bottom-color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang{display:flex;background:var(--cloud);border-radius:var(--pill);overflow:hidden;font-size:.8rem;font-weight:600}
+.lang button{font:inherit;border:none;background:transparent;color:var(--mute);padding:.4rem .75rem;cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--canvas);border-radius:var(--pill)}
+.nav-cta{background:var(--ink);color:var(--canvas);padding:.55rem 1.3rem;border-radius:var(--pill);font-weight:600;font-size:.95rem}
+.nav-cta:hover{background:var(--charcoal)}
+.nav-cta:active{transform:scale(.98)}
 @media(max-width:760px){.nav-links{display:none}}
 
-/* Hero */
-.hero{background:radial-gradient(1100px 500px at 75% -10%,rgba(201,242,79,.14),transparent 60%),var(--bg)}
-.hero-grid{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center;padding:76px 0 84px}
-.hero h1{font-size:clamp(2.3rem,4.8vw,3.6rem);line-height:1.04;font-weight:700}
-.hero h1 em{font-style:normal;color:var(--lime)}
-.hero p{margin-top:18px;max-width:46ch}
-.hero-ctas{margin-top:30px;display:flex;gap:14px;align-items:center}
-.btn{display:inline-block;background:var(--lime);color:#111;padding:.85rem 1.7rem;border-radius:999px;font-weight:800;font-family:var(--display);border:none;font-size:1rem;cursor:pointer;transition:transform .15s ease,background .15s ease}
-.btn:hover{background:var(--lime-deep)}
+/* Campaign-Hero: Full-Bleed-Foto, Display-Typo eingebrannt */
+.campaign{position:relative;overflow:hidden;background:var(--ink)}
+.campaign img{width:100%;height:min(78vh,720px);object-fit:cover}
+.campaign::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,.25) 38%,rgba(0,0,0,.08) 60%,transparent 100%)}
+.campaign-copy{position:absolute;z-index:1;inset:auto 0 0 0;padding:0 clamp(24px,4vw,80px) clamp(32px,5vh,56px);max-width:1440px;margin:0 auto;color:var(--canvas)}
+.campaign h1{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(2.6rem,7.5vw,6rem);line-height:.9;letter-spacing:.005em}
+.campaign p{margin-top:14px;max-width:44ch;font-size:1.05rem;color:#f2f2f2}
+.hero-ctas{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--ink);color:var(--canvas);padding:.85rem 1.9rem;border-radius:var(--pill);font-weight:600;font-family:var(--ui);border:none;font-size:1rem;cursor:pointer}
+.btn:hover{background:var(--charcoal)}
 .btn:active{transform:scale(.98)}
-.btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--line)}
-.btn-ghost:hover{border-color:var(--text-2);background:transparent}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr;padding:44px 0}}
+.btn-onimage{background:var(--canvas);color:var(--ink)}
+.btn-onimage:hover{background:var(--cloud)}
 
-/* Score-Ring (Bandwidth-Score als SVG) */
-.score-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px;display:grid;place-items:center}
-.score-card svg{width:min(300px,70vw);height:auto}
-.score-caption{margin-top:14px;font-size:.92rem;text-align:center}
+/* Global-Streifen */
+.globe{border-bottom:1px solid var(--hairline-soft)}
+.globe .wrap{padding-top:14px;padding-bottom:14px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;font-size:.9rem;font-weight:500;color:var(--mute)}
 
-/* Sektionen */
-.section{padding:84px 0}
-.section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:10px}
-.section .sub{max-width:62ch;margin-bottom:40px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.feature{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px 28px}
-.feature .num{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--lime)}
-.feature h3{font-size:1.08rem;margin:.5rem 0 .4rem}
-@media(max-width:860px){.feature-grid{grid-template-columns:1fr}}
+/* Sektionen: 48px-Rhythmus, Headline direkt unter der Kante */
+.section{padding:48px 0 56px}
+.section h2{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:6px}
+.section .sub{color:var(--mute);max-width:62ch;margin-bottom:24px}
 
-/* Produkt */
-.product-band{background:var(--surface)}
-.product-band .wrap{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:center;padding-top:84px;padding-bottom:84px}
-.device{background:linear-gradient(160deg,var(--surface-2),#101312);border:1px solid var(--line);border-radius:var(--radius);padding:44px;display:grid;place-items:center}
-.device svg{width:min(320px,68vw);height:auto}
-.price-row{display:flex;align-items:baseline;gap:14px;margin:18px 0 6px}
-.price{font-family:var(--display);font-size:1.7rem;font-weight:700;color:var(--text)}
-.vat{font-size:.85rem}
-.spec-list{margin:20px 0 28px;display:grid;gap:10px}
+/* Editorial-Kacheln (Shop-by-Sport-Muster): Foto ist die Karte, Pill unten links */
+.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{position:relative;overflow:hidden;background:var(--cloud)}
+.tile img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.tile .pill-label{position:absolute;left:16px;bottom:16px;background:var(--canvas);color:var(--ink);padding:.5rem 1.2rem;border-radius:var(--pill);font-weight:600;font-size:.95rem}
+.tile-meta{padding:10px 2px 0;font-size:.95rem}
+.tile-meta p{color:var(--mute)}
+@media(max-width:860px){.tile-grid{grid-template-columns:1fr}}
+
+/* Score-Karte (App-Vorschau) auf Soft-Fläche */
+.score-strip{background:var(--cloud)}
+.score-strip .wrap{padding-top:48px;padding-bottom:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.score-card{background:var(--canvas);padding:40px;display:grid;place-items:center;border:1px solid var(--hairline-soft)}
+.score-card svg{width:min(280px,64vw);height:auto}
+.score-caption{margin-top:12px;font-size:.92rem;color:var(--mute);text-align:center}
+@media(max-width:860px){.score-strip .wrap{grid-template-columns:1fr}}
+
+/* Produktseite: Foto/Render auf Soft-Fläche, Null-Radius */
+.product-band .wrap{display:grid;grid-template-columns:6fr 5fr;gap:48px;align-items:center;padding-top:48px;padding-bottom:56px}
+.device{background:var(--cloud);padding:56px;display:grid;place-items:center}
+.device svg{width:min(320px,66vw);height:auto}
+.price-row{display:flex;align-items:baseline;gap:14px;margin:14px 0 4px}
+.price{font-size:1.4rem;font-weight:500}
+.vat{font-size:.88rem;color:var(--mute)}
+.spec-list{margin:20px 0 26px;display:grid;gap:8px}
 .spec-list div{display:flex;gap:10px;align-items:baseline}
-.spec-list b{color:var(--text);font-weight:600;min-width:9.5rem}
-.cart-note{margin-top:14px;color:var(--lime);font-weight:700;display:none}
+.spec-list b{font-weight:600;min-width:9.5rem}
+.spec-list span{color:var(--mute)}
+.cart-note{margin-top:14px;color:var(--success);font-weight:600;display:none}
 @media(max-width:860px){.product-band .wrap{grid-template-columns:1fr}}
 
-/* Banner-Streifen (global) */
-.globe{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg)}
-.globe .wrap{padding-top:22px;padding-bottom:22px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;font-size:.9rem}
-.globe span b{color:var(--text);font-weight:700}
+/* Formulare: Labels über Feldern, Pill-Submit */
+.formcard{background:var(--canvas);border:1px solid var(--hairline-soft);padding:32px;max-width:620px}
+.formcard h2{font-size:1.4rem}
+.field{margin-top:16px}
+.field label{display:block;font-size:.9rem;font-weight:600;margin-bottom:6px}
+.field input{width:100%;padding:.7rem 1rem;border-radius:8px;border:1.5px solid var(--hairline);background:var(--canvas);color:var(--ink);font:inherit}
+.field input:focus{outline:2px solid var(--ink);outline-offset:1px}
+.check{display:flex;gap:10px;margin-top:16px;font-size:.92rem;align-items:flex-start;color:var(--charcoal)}
+.check input{margin-top:3px;accent-color:var(--ink)}
+.fineprint{margin-top:12px;font-size:.8rem;color:var(--stone)}
+.form-note{margin-top:14px;color:var(--success);font-weight:600;display:none}
 
-/* Formulare */
-.formcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px;max-width:640px}
-.formcard h2{font-size:1.5rem}
-.field{margin-top:18px}
-.field label{display:block;font-size:.9rem;color:var(--text);font-weight:600;margin-bottom:6px}
-.field input{width:100%;padding:.75rem 1rem;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
-.field input:focus{outline:2px solid var(--lime);outline-offset:1px}
-.check{display:flex;gap:10px;margin-top:16px;font-size:.92rem;align-items:flex-start}
-.check input{margin-top:4px;accent-color:var(--lime)}
-.fineprint{margin-top:14px;font-size:.8rem;color:#7e847f}
-.form-note{margin-top:14px;color:var(--lime);font-weight:700;display:none}
-
-/* Newsletter-Streifen */
-.newsletter{background:var(--surface)}
-.newsletter .wrap{padding-top:64px;padding-bottom:64px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+/* Newsletter auf Soft-Fläche */
+.newsletter{background:var(--cloud)}
+.newsletter .wrap{padding-top:48px;padding-bottom:56px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.newsletter h2{font-size:1.6rem}
+.newsletter p{color:var(--mute);margin-top:8px;max-width:44ch}
 @media(max-width:860px){.newsletter .wrap{grid-template-columns:1fr}}
 
 /* Privacy-Seite */
-.legal{max-width:760px;padding:64px 0 90px}
-.legal h1{font-size:2rem;margin-bottom:8px}
-.legal .stand{font-size:.85rem;margin-bottom:34px}
-.legal h2{font-size:1.12rem;margin:34px 0 8px}
-.legal p{margin:.5rem 0}
-.legal .upfront{background:var(--surface);border:1px solid var(--lime);border-radius:12px;padding:18px 20px;margin:22px 0}
+.legal{max-width:760px;padding:48px 0 80px}
+.legal h1{font-size:1.9rem;margin-bottom:6px}
+.legal .stand{font-size:.85rem;color:var(--mute);margin-bottom:30px}
+.legal h2{font-size:1.1rem;margin:30px 0 6px}
+.legal p{margin:.45rem 0;color:var(--charcoal)}
+.legal .upfront{background:var(--cloud);border-left:3px solid var(--ink);padding:16px 18px;margin:20px 0}
 
-/* Footer */
-footer{border-top:1px solid var(--line);font-size:.88rem}
-footer .wrap{padding-top:44px;padding-bottom:48px;display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
-footer a{color:var(--text-2)}
-footer a:hover{color:var(--text)}
-.demo-note{max-width:54ch;color:#7e847f}
+/* Footer: Ink-Fläche wie das Nike-Footer-Muster */
+footer{background:var(--ink);color:var(--stone);font-size:.88rem}
+footer .wrap{padding-top:40px;padding-bottom:44px;display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
+footer a{color:var(--canvas)}
+.demo-note{max-width:54ch}

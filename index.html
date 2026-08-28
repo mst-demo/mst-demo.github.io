@@ -7,7 +7,7 @@
 <meta name="description" content="Bandwidth is a fictional wearable demo brand. The Band reads HRV, sleep and strain and turns it into one number: your bandwidth today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="i18n.js"></script>
 <!-- Demo tracking: deliberately sets non-essential cookies WITHOUT consent (scan target) -->
@@ -17,7 +17,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="index.html">BAND<b>WIDTH</b></a>
+    <a class="brand" href="index.html">Bandwidth</a>
     <nav class="nav-links">
       <a href="band.html" data-i18n="nav.band">The Band</a>
       <a href="giveaway.html" data-i18n="nav.giveaway">Giveaway</a>
@@ -33,25 +33,14 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <h1><span data-i18n="hero.h1a">Know your</span><br><em data-i18n="hero.h1b">bandwidth.</em></h1>
-      <p data-i18n="hero.p">The Bandwidth Band reads your heart rate variability, sleep and strain, and turns it into one number: how much you have in the tank today.</p>
-      <div class="hero-ctas">
-        <a class="btn" href="band.html" data-i18n="hero.cta1">Get the Band</a>
-        <a class="btn btn-ghost" href="giveaway.html" data-i18n="hero.cta2">Win one instead</a>
-      </div>
-    </div>
-    <div class="score-card">
-      <svg viewBox="0 0 220 220" role="img" aria-label="Bandwidth score 82 of 100">
-        <circle cx="110" cy="110" r="92" fill="none" stroke="#2a2f2c" stroke-width="14"/>
-        <circle cx="110" cy="110" r="92" fill="none" stroke="#c9f24f" stroke-width="14"
-                stroke-linecap="round" stroke-dasharray="474 578" transform="rotate(-90 110 110)"/>
-        <text x="110" y="104" text-anchor="middle" fill="#eceeed" font-family="Space Grotesk,sans-serif" font-size="52" font-weight="700">82</text>
-        <text x="110" y="138" text-anchor="middle" fill="#a3aaa6" font-family="Manrope,sans-serif" font-size="15">BANDWIDTH</text>
-      </svg>
-      <p class="score-caption" data-i18n="hero.score">Today's bandwidth: 82 of 100. Recovered and ready.</p>
+<section class="campaign">
+  <img src="https://picsum.photos/id/1018/1800/1000" alt="Winding mountain road at dawn" width="1800" height="1000">
+  <div class="campaign-copy">
+    <h1><span data-i18n="hero.h1a">Know your</span> <span data-i18n="hero.h1b">bandwidth.</span></h1>
+    <p data-i18n="hero.p">The Bandwidth Band reads your heart rate variability, sleep and strain, and turns it into one number: how much you have in the tank today.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-onimage" href="band.html" data-i18n="hero.cta1">Get the Band</a>
+      <a class="btn" href="giveaway.html" data-i18n="hero.cta2">Win one instead</a>
     </div>
   </div>
 </section>
@@ -68,22 +57,48 @@
   <div class="wrap">
     <h2 data-i18n="feat.h2">One number, three signals</h2>
     <p class="sub" data-i18n="feat.sub">Bandwidth blends the three metrics that actually predict your day. No streak pressure, no badges, just an honest reading.</p>
-    <div class="feature-grid">
-      <div class="feature">
-        <div class="num">01</div>
-        <h3 data-i18n="feat.1h">Recovery</h3>
-        <p data-i18n="feat.1p">Heart rate variability and resting heart rate, measured while you sleep.</p>
+    <div class="tile-grid">
+      <div>
+        <div class="tile">
+          <img src="https://picsum.photos/id/235/900/1125" alt="Still mountain lake at dusk" width="900" height="1125">
+          <span class="pill-label" data-i18n="feat.1h">Recovery</span>
+        </div>
+        <div class="tile-meta"><p data-i18n="feat.1p">Heart rate variability and resting heart rate, measured while you sleep.</p></div>
       </div>
-      <div class="feature">
-        <div class="num">02</div>
-        <h3 data-i18n="feat.2h">Sleep</h3>
-        <p data-i18n="feat.2p">Stages, debt and consistency, scored against your own baseline.</p>
+      <div>
+        <div class="tile">
+          <img src="https://picsum.photos/id/421/900/1125" alt="Calm misty shoreline in the morning" width="900" height="1125">
+          <span class="pill-label" data-i18n="feat.2h">Sleep</span>
+        </div>
+        <div class="tile-meta"><p data-i18n="feat.2p">Stages, debt and consistency, scored against your own baseline.</p></div>
       </div>
-      <div class="feature">
-        <div class="num">03</div>
-        <h3 data-i18n="feat.3h">Strain</h3>
-        <p data-i18n="feat.3p">How hard today actually was, in training and in life.</p>
+      <div>
+        <div class="tile">
+          <img src="https://picsum.photos/id/1041/900/1125" alt="Breaking ocean wave" width="900" height="1125">
+          <span class="pill-label" data-i18n="feat.3h">Strain</span>
+        </div>
+        <div class="tile-meta"><p data-i18n="feat.3p">How hard today actually was, in training and in life.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="score-strip">
+  <div class="wrap">
+    <div class="score-card">
+      <svg viewBox="0 0 220 220" role="img" aria-label="Bandwidth score 82 of 100">
+        <circle cx="110" cy="110" r="92" fill="none" stroke="#e5e5e5" stroke-width="13"/>
+        <circle cx="110" cy="110" r="92" fill="none" stroke="#111111" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="474 578" transform="rotate(-90 110 110)"/>
+        <text x="110" y="104" text-anchor="middle" fill="#111111" font-family="Jost,sans-serif" font-size="54" font-weight="600">82</text>
+        <text x="110" y="140" text-anchor="middle" fill="#707072" font-family="Archivo,sans-serif" font-size="14" letter-spacing="2">BANDWIDTH</text>
+      </svg>
+      <p class="score-caption" data-i18n="hero.score">Today's bandwidth: 82 of 100. Recovered and ready.</p>
+    </div>
+    <div>
+      <h2 data-i18n="score.h2">Your day, in one number</h2>
+      <p class="sub" data-i18n="score.p">Open the app, see your bandwidth, decide: push, maintain or recover. The score is calibrated to your own baseline, not to an average athlete.</p>
+      <a class="btn" href="band.html" data-i18n="nav.cta">Get the Band</a>
     </div>
   </div>
 </section>
