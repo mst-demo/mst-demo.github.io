@@ -15,15 +15,15 @@
   /* "Analytics"-Cookies (nicht essenziell) */
   setCookie("_ga", "GA1.1." + rand() + "." + Date.now(), 365);
   setCookie("_gid", "GA1.1." + rand(), 1);
-  setCookie("gl_analytics_id", rand(), 180);
+  setCookie("bw_analytics_id", rand(), 180);
 
   /* "Marketing"-Cookies (nicht essenziell) */
   setCookie("_fbp", "fb.1." + Date.now() + "." + rand(), 90);
-  setCookie("gl_campaign", "herbst-2026", 30);
+  setCookie("bw_campaign", "spring-launch-26", 30);
 
   /* Essenziell: Session-Cookie (darf auch ohne Consent gesetzt werden) */
-  if (!document.cookie.includes("gl_session=")) {
-    document.cookie = "gl_session=" + rand() + ";path=/;SameSite=Lax";
+  if (!document.cookie.includes("bw_session=")) {
+    document.cookie = "bw_session=" + rand() + ";path=/;SameSite=Lax";
   }
 
   /* Simuliertes Seitenaufruf-Tracking (nur Konsole, kein Versand) */

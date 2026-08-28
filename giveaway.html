@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Win a Bandwidth Band 2</title>
+<meta name="description" content="Monthly giveaway: win a Bandwidth Band 2. Fictional demo brand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="i18n.js"></script>
+<!-- Demo tracking: deliberately sets non-essential cookies WITHOUT consent (scan target) -->
+<script src="tracking.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">BAND<b>WIDTH</b></a>
+    <nav class="nav-links">
+      <a href="band.html" data-i18n="nav.band">The Band</a>
+      <a href="giveaway.html" data-i18n="nav.giveaway">Giveaway</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
+        <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
+      </div>
+      <a class="nav-cta" href="band.html" data-i18n="nav.cta">Get the Band</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <h1 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:10px" data-i18n="gw.h1">Win a Bandwidth Band 2</h1>
+    <p class="sub" data-i18n="gw.p">We give away five bands every month. Fill in the form and you are in the draw.</p>
+
+    <form class="formcard" onsubmit="event.preventDefault(); this.querySelector('.form-note').style.display='block';">
+      <div class="field">
+        <label for="gw-name" data-i18n="gw.name">Full name</label>
+        <input id="gw-name" type="text" required>
+      </div>
+      <div class="field">
+        <label for="gw-mail" data-i18n="gw.mail">Email address</label>
+        <input id="gw-mail" type="email" required>
+      </div>
+      <div class="field">
+        <label for="gw-birth" data-i18n="gw.birth">Date of birth</label>
+        <input id="gw-birth" type="date" required>
+      </div>
+      <div class="field">
+        <label for="gw-phone" data-i18n="gw.phone">Phone number</label>
+        <input id="gw-phone" type="tel" required>
+      </div>
+      <div class="field">
+        <label for="gw-job" data-i18n="gw.job">Job title</label>
+        <input id="gw-job" type="text" required>
+      </div>
+      <label class="check">
+        <input type="checkbox" checked>
+        <span data-i18n="gw.check">I agree to receive marketing from Bandwidth and its partners.</span>
+      </label>
+      <p class="fineprint" data-i18n="gw.fine">By entering the giveaway you subscribe to our newsletter. Participation is only possible with subscription.</p>
+      <div class="field"><button class="btn" type="submit" data-i18n="gw.btn">Enter the draw</button></div>
+      <p class="form-note" data-i18n="gw.note">You are in the draw (demo only).</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="demo-note" data-i18n="foot.demo">Bandwidth is a fictional demo brand for product demos around cookie consent. There are no real products, purchases or customer accounts.</p>
+    <p><a href="privacy.html" data-i18n="foot.privacy">Privacy policy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
